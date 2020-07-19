@@ -12,7 +12,8 @@ import UIKit
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var RegisterButton: UIButton!
-     
+    @IBOutlet weak var outletInput: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,4 +34,17 @@ class RegisterViewController: UIViewController {
     }
 
 
+    @IBAction func registerButtonPressed(_ sender: UIButton) {
+        
+        switch outletInput.selectedSegmentIndex {
+        case 0:
+            self.performSegue(withIdentifier: K.empreendedorSegue, sender: self)
+
+        case 1:
+            self.performSegue(withIdentifier: K.clienteSegue, sender: self)
+
+        default:
+            print("ERROR")
+        }
+    }
 }

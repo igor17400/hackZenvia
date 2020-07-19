@@ -15,4 +15,6 @@ struct K {
     static let registerSegue = "RegisterToMain"
     static let leadsSegue = "leadsSegue"
     static let loginSegue = "LoginToMain"
+    static let empreendedorSegue = "EmpreendedorSegue"
+    static let clienteSegue = "ClienteSegue"
 }
